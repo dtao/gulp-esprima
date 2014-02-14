@@ -1,0 +1,12 @@
+{
+  "name": "gulp-esprima",
+  "description": "Parse JS to ASTs w/ esprima",
+  "version": "0.1.0",
+  "main": "index.js",
+  "author": "Dan Tao <daniel.tao@gmail.com>",
+  "repository": "git@github.com:dtao/gulp-esprima.git",
+  "dependencies": {
+    "esprima": ">= 1.0.4",
+    "through2": ">= 0.4.1"
+  }
+}
