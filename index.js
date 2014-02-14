@@ -4,6 +4,10 @@ var esprima = require('esprima'),
 module.exports = function(options) {
   options || (options = {});
 
+  var stringify = options.pretty ?
+    function(tree) { return JSON.stringify(tree, null, 2); } :
+    JSON.stringify;
+
   return through.obj(function(file, encoding, callback) {
     if (file.isNull()) {
       this.push(file);
@@ -12,8 +16,8 @@ module.exports = function(options) {
 
     try {
       var code = String(file.contents),
-          tree = esprima.parse(code, options);
-      file.contents = new Buffer(JSON.stringify(tree));
+          tree = esprima.parse(code, options.esprima || {});
+      file.contents = new Buffer(stringify);
       this.push(file);
 
     } catch (e) {
