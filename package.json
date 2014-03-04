@@ -4,9 +4,17 @@
   "version": "0.1.0",
   "main": "index.js",
   "author": "Dan Tao <daniel.tao@gmail.com>",
-  "repository": "git@github.com:dtao/gulp-esprima.git",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:dtao/gulp-esprima.git"
+  },
+  "homepage": "https://github.com/dtao/gulp-esprima/",
+  "bugs": "https://github.com/dtao/gulp-esprima/issues/",
   "dependencies": {
     "esprima": ">= 1.0.4",
     "through2": ">= 0.4.1"
-  }
+  },
+  "keywords": [
+    "gulpplugin"
+  ]
 }
